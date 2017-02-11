@@ -22,27 +22,27 @@ import java.util.Locale;
  * Created by kat on 2/10/17.
  */
 
-public class MainMenuActivityView extends LinearLayout {
+public class ActivityInfoView extends LinearLayout {
 
     private LayoutInfoBinding binding;
 
-    public MainMenuActivityView(Context context) {
+    public ActivityInfoView(Context context) {
         super(context);
         init();
     }
 
-    public MainMenuActivityView(Context context, AttributeSet attrs) {
+    public ActivityInfoView(Context context, AttributeSet attrs) {
         super(context, attrs);
         init();
     }
 
-    public MainMenuActivityView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public ActivityInfoView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init();
     }
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-    public MainMenuActivityView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+    public ActivityInfoView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
         init();
     }
