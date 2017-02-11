@@ -74,6 +74,11 @@ public class DeviceInfoView extends LinearLayout {
             stringBuilder.append("<br><br>");
         }
 
+        if (devices.length < 1) {
+            stringBuilder.append("<p>Whoops! Looks like you don't have any devices connected.</p>");
+        }
+
+        StringBuilder title = new StringBuilder("<h1>Your connected devices</h1>");
         binding.setInfoText(Html.fromHtml(stringBuilder.toString()));
     }
 }

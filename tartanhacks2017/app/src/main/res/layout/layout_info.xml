@@ -10,16 +10,22 @@
         android:orientation="vertical">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:background="@color/primary_dark_teal"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
             android:text="@{titleText}"
+            android:textColor="@color/white"
+            android:textSize="@dimen/subtitle_text_size"
+            android:padding="@dimen/text_padding_large"
             />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:background="@color/primary_teal"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@{infoText}"
+            android:textColor="@color/white"
+            android:padding="@dimen/text_padding"
             />
 
     </LinearLayout>

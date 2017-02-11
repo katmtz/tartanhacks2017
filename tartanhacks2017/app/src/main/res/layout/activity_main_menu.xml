@@ -28,7 +28,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:visibility="@{loading ? View.GONE : View.VISIBLE}">
+            android:visibility="@{loading ? View.GONE : View.VISIBLE}"
+            >
 
             <ScrollView
                 android:layout_width="fill_parent"
@@ -39,23 +40,30 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:paddingBottom="@dimen/activity_horizontal_margin"
-                    android:paddingLeft="@dimen/activity_horizontal_margin"
-                    android:paddingRight="@dimen/activity_horizontal_margin"
-                    android:paddingTop="@dimen/activity_horizontal_margin">
+                    >
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@{@string/hello_format(user.getFullName())}"
+                        android:textSize="@dimen/title_text_size"
+                        android:padding="@dimen/text_padding_large"
+                        android:textAlignment="center"
+                        android:background="@color/primary_dark_teal"
+                        android:textColor="@color/white"
                         />
 
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@{@string/scopes_granted_format(scopesGranted)}"
-                        android:visibility="@{scopesGranted != null ? View.VISIBLE : View.GONE}"/>
+                        android:visibility="@{scopesGranted != null ? View.VISIBLE : View.GONE}"
+                        android:padding="@dimen/text_padding"
+                        android:paddingLeft="@dimen/text_padding_large"
+                        android:background="@color/primary_teal"
+                        android:textColor="@color/white"
+                        />
 
                     <edu.cmu.kat.tartanhacks2017.views.ProfileInfoView
                         android:id="@+id/profileInfoView"
@@ -75,8 +83,16 @@
                         android:layout_height="wrap_content"
                         />
 
-                </LinearLayout>
+                    <Button
+                        android:id="@+id/logout_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="onLogoutClick"
+                        android:text="@string/logout"
+                        android:background="@color/primary_dark_teal"
+                        />
 
+                </LinearLayout>
 
             </ScrollView>
 
@@ -84,14 +100,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0"
+                android:background="@color/primary_dark_teal"
                 >
 
                 <Button
-                    android:id="@+id/logout_button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:onClick="onLogoutClick"
-                    android:text="@string/logout"/>
+                    android:onClick="onStartGameClick"
+                    android:text="@string/button_game_start"/>
             </RelativeLayout>
 
 

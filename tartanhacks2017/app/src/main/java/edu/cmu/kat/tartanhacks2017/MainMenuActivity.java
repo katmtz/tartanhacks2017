@@ -77,6 +77,13 @@ public class MainMenuActivity extends AppCompatActivity implements UserService.U
         AuthenticationManager.logout(this);
     }
 
+    /** Initialize and display unity package here! */
+    public void onStartGameClick(View view) {
+        Toast.makeText(this,
+                "Game start clicked! (dummy)",
+                Toast.LENGTH_SHORT).show();
+    }
+
 
     @Override
     public void onUserLoaded(User user) {
